@@ -6,20 +6,10 @@ import PlaceDetail from "../components/PlaceDetail";
 import { useEffect, useState } from "react";
 import { getPlacesData } from "./api";
 
-const places = [
-  { name: "Sample Place1" },
-  { name: "Sample Place1" },
-  { name: "Sample Place1" },
-  { name: "Sample Place1" },
-  { name: "Sample Place1" },
-  { name: "Sample Place1" },
-  { name: "Sample Place1" },
-  { name: "Sample Place1" },
-
-];
 
 const Home = () => {
 
+  const [places, setPlaces] = useState([])
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null)
   const [type, setType] = useState('restaurants');
@@ -36,10 +26,14 @@ const Home = () => {
       }
     );
   }, []);
-  
+
   useEffect(() => {
+    setIsLoading(true)
     getPlacesData(bounds?.sw, bounds?.ne).then((data) => {
       console.log(data);
+      setPlaces(data)
+      setIsLoading(false)
+
     });
   }, [coordinates, bounds]);
 

@@ -1,8 +1,8 @@
-import { Box, Flex, SkeletonCircle, SkeletonText } from '@chakra-ui/react';
-import React from 'react'
-import PlaceDetail from './PlaceDetail';
+import { Box, Flex, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
+import React from "react";
+import PlaceDetail from "./PlaceDetail";
 
-const List = (places, isLoading) => {
+const List = ({places, isLoading}) => {
   if (isLoading) return (
 
     <Flex
