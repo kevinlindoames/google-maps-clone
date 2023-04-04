@@ -1,7 +1,7 @@
 import { Flex, Input, InputGroup, InputRightElement, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
 import { Autocomplete } from '@react-google-maps/api';
 import React from 'react'
-import { BiChevronDown, BiSearch, BiStar } from 'react-icons/bi'
+import { BiChevronDown, BiHotel, BiMapAlt, BiRestaurant, BiSearch, BiStar } from 'react-icons/bi'
 import { Rating } from "@material-ui/lab";
 
 const Header = ({ seType, setRatings, setCoordinates }) => {
@@ -124,10 +124,76 @@ const Header = ({ seType, setRatings, setCoordinates }) => {
               </MenuItem>
             </MenuList>
           </Menu>
-          <BiChevronDown fontSize={25}/>        </Flex>
+          <BiChevronDown fontSize={25} />
+
+          {/* Restaurants */}
+          <Flex
+            alignItems={"center"}
+            justifyContent={"center"}
+            px={4}
+            py={2}
+            bg={"white"}
+            rounded={"full"}
+            ml={4}
+            shadow="lg"
+            cursor={"pointer"}
+            _hover={{ bg: "gray.100" }}
+            transition={"ease-in-out"}
+            transitionDuration={"0.3s"}
+            onClick={() => setType("restaurants")}
+          >
+            <BiRestaurant fontSize={25} />
+            <Text ml={3} fontSize={16} fontWeight={500}>
+              Restaurants
+            </Text>
+          </Flex>
+
+          {/* Hotels */}
+          <Flex
+            alignItems={"center"}
+            justifyContent={"center"}
+            px={4}
+            py={2}
+            bg={"white"}
+            rounded={"full"}
+            ml={4}
+            shadow="lg"
+            cursor={"pointer"}
+            _hover={{ bg: "gray.100" }}
+            transition={"ease-in-out"}
+            transitionDuration={"0.3s"}
+            onClick={() => setType("hotels")}
+          >
+            <BiHotel fontSize={25} />
+            <Text ml={3} fontSize={16} fontWeight={500}>
+              Hotels
+            </Text>
+          </Flex>
+
+          {/* Attractions */}
+          <Flex
+            alignItems={"center"}
+            justifyContent={"center"}
+            px={4}
+            py={2}
+            bg={"white"}
+            rounded={"full"}
+            ml={4}
+            shadow="lg"
+            cursor={"pointer"}
+            _hover={{ bg: "gray.100" }}
+            transition={"ease-in-out"}
+            transitionDuration={"0.3s"}
+            onClick={() => setType("attractions")}
+          >
+            <BiMapAlt fontSize={25} />
+            <Text ml={3} fontSize={16} fontWeight={500}>
+              Attractions
+            </Text>
+          </Flex>
+        </Flex>
       </Flex>
     </Flex>
-
   );
 };
 
