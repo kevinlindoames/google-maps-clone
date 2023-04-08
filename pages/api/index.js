@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const url = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary';
+const url =
+  "https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary";
 
 
 

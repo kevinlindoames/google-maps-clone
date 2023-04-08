@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @next/next/no-sync-scripts */
 
 import { Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
@@ -7,7 +9,6 @@ import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api";
 import Head from "next/head";
-
 
 const Home = () => {
 
@@ -55,9 +56,12 @@ const Home = () => {
       maxHeight={"100vh"}
       position={"relative"}
     >
-      <Head>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key= AIzaSyC6PmggMbWzJXNN1BqbK0ueKiKa3Y4eFNA"></script>
+
+      <Head>        
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyC6PmggMbWzJXNN1BqbK0ueKiKa3Y4eFNA"></script>
       </Head>
+      
+
 
       <Header
         setType={setType}

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/jsx-key */
 import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";
@@ -48,6 +50,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
             rounded={"lg"}
           >
             <Image
+            
               objectFit={"cover"}
               width={"full"}
               height={"120px"}
@@ -57,7 +60,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
                   ? cardData?.photo?.images?.large?.url
                   : "https://explorelompoc.com/wp-content/uploads/2021/06/food_placeholder.jpg"
               }
-            />
+              />
 
             <Text
               textTransform={"capitalize"}

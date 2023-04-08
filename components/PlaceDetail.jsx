@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Badge, Flex, Image, Text } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import React from "react";
