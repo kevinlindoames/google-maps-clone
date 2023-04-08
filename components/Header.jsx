@@ -1,5 +1,4 @@
 /* eslint-disable react/no-children-prop */
-
 import {
   Flex,
   Input,
@@ -11,7 +10,8 @@ import {
   MenuList,
   Text,
 } from "@chakra-ui/react";
-import { Rating } from "@material-ui/lab";
+import { Rating } from "@mui/material";
+
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 
@@ -110,7 +110,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                     2.0
                   </Text>
 
-                  <Rating size="small" value={2} readOnly />
+                  {/* <Rating size="small" value={2} readOnly /> */}
                 </MenuItem>
 
                 <MenuItem
@@ -123,7 +123,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                     3.0
                   </Text>
 
-                  <Rating size="small" value={3} readOnly />
+                  {/* <Rating size="small" value={3} readOnly /> */}
                 </MenuItem>
 
                 <MenuItem
@@ -135,8 +135,8 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                   <Text fontSize={20} fontWeight={500} color={"orange.500"}>
                     4.0
                   </Text>
-
-                  <Rating size="small" value={4} readOnly />
+                                 
+                  {/* <Rating size="small" value={4} readOnly /> */}
                 </MenuItem>
 
                 <MenuItem
@@ -149,7 +149,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                     4.5
                   </Text>
 
-                  <Rating size="small" value={5} readOnly />
+                  {/* <Rating size="small" value={5} readOnly /> */}
                 </MenuItem>
               </MenuList>
             </Menu>

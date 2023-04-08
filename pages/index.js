@@ -1,5 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-sync-scripts */
+/* eslint-disable react-hooks/exhaustive-deps */
+
 
 import { Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";

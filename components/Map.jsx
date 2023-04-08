@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-key */
+
 import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";

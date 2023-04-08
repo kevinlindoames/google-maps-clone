@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
+
 import { Badge, Flex, Image, Text } from "@chakra-ui/react";
-import { Rating } from "@material-ui/lab";
+import { Rating } from "@mui/material";
+
 import React from "react";
 
 import { IoLocation } from "react-icons/io5";
@@ -47,7 +49,7 @@ const PlaceDetail = ({ place }) => {
 
           {/* Ratings */}
           <Flex alignItems={"center"} width={"full"}>
-            <Rating size="small" value={Number(place.rating)} readOnly />
+            {/* <Rating size="small" value={Number(place.rating)} readOnly /> */}
             <Text
               fontSize={"sm"}
               fontWeight={"500"}
